@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login System with JSON Database</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Login -->
+        <div class="form-container" id="auth-container">
+            <div class="logo">
+                <img src="cj-logo.webp" alt="Image Icon">
+            </div>
+            
+            <h2 class="form-title" id="form-title">Login</h2>
+            
+            <div class="alert" id="alert-message"></div>
+            
+            <form id="login-form">
+                <div class="form-control">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required />
+                    <div class="error" id="login-email-error"></div>
+                </div>
+                <div class="form-control">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required minlength="6" />
+                    <div class="error" id="login-password-error"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+            <form id="register-form" style="display: none;">
+                <div class="form-control">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required minlength="3" />
+                    <div class="error" id="register-name-error"></div>
+                </div>
+                <div class="form-control">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required />
+                    <div class="error" id="register-email-error"></div>
+                </div>
+                <div class="form-control">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required minlength="6" />
+                    <div class="error" id="register-password-error"></div>
+                </div>
+                <div class="form-control">
+                    <label for="register-confirm-password">Confirm Password</label>
+                    <input type="password" id="register-confirm-password" required />
+                    <div class="error" id="register-confirm-password-error"></div>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            
+            <div class="toggle-form">
+                <span id="toggle-text">Don't have an account?</span>
+                <a href="#" id="toggle-link">Register here</a>
+            </div>
+        </div>
+
+        <!-- Welcome after logging in -->
+        <div class="welcome-container" id="welcome-container">
+            <div class="logo">
+                <img src="grad.jpg" alt="Image Icon">
+            </div>
+            <h1 class="welcome-message">WELCOME</h1>
+            <div class="user-email" id="user-email"></div>
+            <button class="btn btn-primary btn-logout" id="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+
+
+</body>
+</html>
